@@ -41,13 +41,13 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
     GOOS=${TARGETOS:-linux} \
     GOARCH=${TARGETARCH:-amd64} \
     CGO_ENABLED=0 \
-    GO111MODULE=on \
+    CGO_ENABLED=0 \
     go build -a -o /workspace/manager main.go
 
 ###############################################################################
 # Stage 2: Copy build assets to create the smallest final runtime image
 ###############################################################################
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.7 AS runtime
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest AS runtime
 
 ARG USER=2000
 ARG IMAGE_VERSION
