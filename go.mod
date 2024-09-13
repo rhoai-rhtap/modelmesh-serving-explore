@@ -1,6 +1,6 @@
 module github.com/kserve/modelmesh-serving
 
-go 1.19
+go 1.21
 
 require (
 	github.com/dereklstinson/cifar v0.0.0-20200421171932-5722a3b6a0c7
@@ -134,7 +134,6 @@ require (
 )
 
 replace (
-
 	// Fixes CVE-2022-21698 and CVE-2023-45142
 	// this dependency comes from k8s.io/component-base@v0.28.4 and k8s.io/apiextensions-apiserver@v0.28.4
 	// before removing it make sure that the next version of the related k8s dependencies contains the fix
