@@ -3,6 +3,9 @@
   "extends": ["config:recommended"],
   "branchPrefix": "renovate/",
   "baseBranches": ["main", "test-1"],
+  "ignoreTests": true,
+  "automergeType": "pr",
+  "automerge": true,
   "enabledManagers": ["dockerfile", "tekton"],
   "dockerfile": {
     "enabled": true
@@ -16,6 +19,9 @@
       "matchBaseBranches": ["main"],
       "matchFileNames": ["*Dockerfile.konflux*"],
       "matchUpdateTypes": ["digest"],
+      "ignoreTests": true,
+      "automergeType": "pr",
+      "automerge": true,
       "enabled": true,
       "groupName": "Dockerfile Digest Updates - Main",
       "branchPrefix": "renovate/docker-main/",
