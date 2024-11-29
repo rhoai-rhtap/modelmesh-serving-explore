@@ -7,6 +7,7 @@
   "automergeType": "pr",
   "automerge": true,
   "enabledManagers": ["dockerfile", "tekton"],
+  "schedule": ["*/30 * * * *"]
   "dockerfile": {
     "enabled": true
   },
@@ -26,7 +27,7 @@
       "groupName": "Dockerfile Digest Updates - Main",
       "branchPrefix": "renovate/docker-main/",
       "semanticCommits": "enabled",
-      "schedule": ["at any time"]
+      "schedule": ["*/30 * * * *"]
     },
     {
       "matchManagers": ["dockerfile"],
