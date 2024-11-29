@@ -28,7 +28,8 @@
       "groupName": "Dockerfile Digest Updates - Main",
       "branchPrefix": "renovate/docker-main/",
       "semanticCommits": "enabled",
-      "schedule": ["*/30 * * * *"]
+      "schedule": ["*/30 * * * *"],
+      "automergeSchedule": ["*/30 * * * *"],
     },
     {
       "matchManagers": ["dockerfile"],
